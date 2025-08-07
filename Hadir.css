@@ -1,0 +1,246 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+header h1 {
+  color: #1e3a5f;
+}
+
+header p {
+  font-size: 1em;
+  color: #333;
+}
+
+/* Filter Dropdown */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Tabel */
+#absensiTableWrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1000px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #e6f0ff;
+}
+
+/* Summary */
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Chart Section */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 15px 60px;
+}
+
+.chart-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.chart-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #666;
+}
+#absensiTableWrapper {
+  max-height: 395px; /* Sesuaikan tinggi agar pas untuk 10 baris */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background-color: white;
+  position: relative;
+}
+
+/* Membuat header tabel tetap di atas saat scroll */
+#absensiTable thead th {
+  position: sticky;
+  top: 0;
+  background-color: #5982ad;
+  color: white;
+  z-index: 1;
+}
+
+/* Perbaiki scroll bar */
+#absensiTableWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+#absensiTableWrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+#absensiTableWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+/* Pemisah antara tabel & grafik */
+.section-divider {
+  height: 30px;
+  border-top: 2px dashed #ccc;
+  margin: 40px auto;
+  width: 90%;
+}
+
+/* Styling tabel agar lebih elegan */
+#absensiTableWrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+  margin-top: 20px;
+}
+
+#absensiTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#absensiTable thead th {
+  position: sticky;
+  top: 0;
+  background-color: #007bff;
+  color: white;
+  z-index: 1;
+  text-align: left;
+  padding: 10px;
+}
+
+#absensiTable td {
+  padding: 10px;
+}
+
+#summary {
+  background-color: #f0f8ff;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #1e3a5f;
+}
+
+/* Grafik card */
+.chart-card {
+  width: 100%;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 18px 15px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.chart-card h2 {
+  font-size: 16px;
+  color: #1e3a5f;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.chart-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 30px 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+/* Susun gambar ke-4 & ke-5 agar berada di tengah */
+.chart-card:nth-child(4) {
+  grid-column: 2 / 3;
+}
+
+.chart-card:nth-child(5) {
+  grid-column: 3 / 4;
+}
+
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, #ccc 10%, transparent 50%, #ccc 90%);
+  margin: 50px auto 30px;
+  width: 90%;
+  opacity: 0.5;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Kehadiran Siswa</title>
+  <link rel="stylesheet" href="Hadir.css" />
+</head>
+<body>
+  <header>
+    <h1>Monitoring Kehadiran Siswa SMA</h1>
+    <p>Data Kehadiran Berbasis MongoDB</p>
+  </header>
+
+  <main>
+    <!-- Filter & Tabel Kehadiran -->
+    <section class="full-width-section">
+      <div class="filters">
+        <label for="kelas">Kelas:</label>
+        <select id="kelas" onchange="filterData()">
+          <option value="">Semua</option>
+          <option value="X IPA 1">X IPA 1</option>
+          <option value="X IPA 2">X IPA 2</option>
+          <option value="XII IPA 1">XII IPA 1</option>
+        </select>
+
+        <label for="status">Status:</label>
+        <select id="status" onchange="filterData()">
+          <option value="">Semua</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Sakit">Sakit</option>
+          <option value="Izin">Izin</option>
+        </select>
+      </div>
+
+      <div id="absensiTableWrapper">
+        <table id="absensiTable">
+          <thead>
+            <tr>
+              <th>NIS</th>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Tanggal</th>
+              <th>Status</th>
+              <th>Waktu Absen</th>
+              <th>Keterangan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data akan diisi oleh JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div id="summary" class="summary"></div>
+      <div class="section-divider"></div>
+
+    </section>
+
+    <!-- Gambar Chart -->
+    <section class="grid-container">
+      <div class="chart-card">
+        <h2>Jumlah Kehadiran per Status</h2>
+        <img src="assets/Gambar1.png" alt="Diagram Kehadiran" />
+      </div>
+      <div class="chart-card">
+        <h2>Jumlah Kehadiran per Kelas</h2>
+        <img src="assets/Gambar2.png" alt="Sakit" />
+      </div>
+      <div class="chart-card">
+        <h2>Jumlah Kehadiran per Hadir</h2>
+        <img src="assets/Gambar3.png" alt="Izin" />
+      </div>
+      <div class="chart-card">
+        <h2>Waktu Absen Siswa Per Kelas (Waktu)</h2>
+        <img src="assets/Gambar4.png" alt="Per Kelas" />
+      </div>
+      <div class="chart-card">
+        <h2>Status Kehadiran Per Siswa (Ranking)</h2>
+        <img src="assets/Gambar5.png" alt="Per Siswa" />
+      </div>
+    </section>
+  </main> 
+
+  <footer>
+    <p>&copy; 2025 Monitoring Kehadiran Siswa</p>
+  </footer>
+
+  <script src="absensi.js"></script>
+</body>
+</html>
